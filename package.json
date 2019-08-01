@@ -1,0 +1,44 @@
+{
+    "name": "everyday",
+    "version": "0.1.0",
+    "description": "daily learning",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Feafortecsy/everyday.git"
+    },
+    "keywords": [
+        "js",
+        "css",
+        "html"
+    ],
+    "author": "Feafortecsy",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Feafortecsy/everyday/issues"
+    },
+    "homepage": "https://github.com/Feafortecsy/everyday#readme",
+    "devDependencies": {
+        "babel-eslint": "^10.0.2",
+        "eslint-loader": "^2.2.1"
+    },
+    "dependencies": {
+        "eslint": "^6.1.0",
+        "eslint-config-enough": "^0.3.5",
+        "lodash": "^4.17.15",
+        "scss": "^0.2.4",
+        "webpack": "^4.38.0",
+        "webpack-cli": "^3.3.6"
+    },
+    "eslintConfig": {
+        "extends": "enough",
+        "env": {
+            "browser": true,
+            "node": true
+        }
+    }
+}
