@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>圣杯布局</title>
+        <style>
+            *, html, body {
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+            }
+            body{
+                min-width: 700px; /* left.width * 2 + right.width */
+            }
+            .header, .footer {
+                width: 100%;
+                height: 10rem;
+                background-color: bisque;
+            }
+            .main {
+                /* padding的值为左右盒子宽度 */
+                padding: 0 300px 0 200px;
+                overflow: hidden;
+            }
+            .content, .left, .right {
+                position: relative;
+                float: left;
+                height: 10rem;
+                line-height: 10rem;
+                text-align: center;
+            }
+            .content {
+                width: 100%;
+                min-width: 400px;
+                background: red;
+            }
+            .left {
+                left: -200px;
+                width: 200px;
+                margin-left: -100%;
+                background: yellow;
+            }
+            .right {
+                right: -300px;
+                margin-left: -300px;
+                width: 300px;
+                background: cadetblue;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header"></header>
+        <main class="main">
+            <!-- 中间主体在最前 -->
+            <div class="content">内容区</div>
+            <aside class="left">左侧</aside>
+            <aside class="right">右侧</aside>
+        </main>
+        <footer class="footer"></footer>
+    </body>
+</html>

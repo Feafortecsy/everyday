@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组去重</title>
+</head>
+<body>
+    <script>
+        const Bicirculating = (array) => {
+            const result = [];
+            if(Array.isArray(array)) {
+                for(let i = 0; i < array.length; i++) {
+                    let flag = false;
+                    for(let j = 0; j < result.length; j++) {
+                        if (array[i] === result[j]) {
+                            if (array[i] === result[j]) {
+                                flag = true;
+                                break
+                            }
+                        }
+                    }
+                    if(!flag) {
+                        result.push(array[i]);
+                    }
+                }
+            } else {
+                throw new Error(`array is not type of array`);
+            }
+        }
+
+        const Deconstruction = (array) => {
+            if(Array.isArray(array)) {
+                // 返回新数组
+                return [...new Set(array)];
+            } else {
+                throw new Error(`array is not type of array`);
+            }
+        }
+
+        const FromAndSet = (array) => {
+            if(Array.isArray(array)) {
+                // 返回新数组
+                return Array.from(new Set(array));
+            } else {
+                throw new Error(`array is not type of array`);
+            }
+        }
+
+        const FilterAndIndexOf = (array) => {
+            if(Array.isArray(array)) {
+                // 返回新数组
+                return array.filter((item, index, array) => {
+                    return array.indexOf(item) === index;
+                })
+            } else {
+                throw new Error(`array is not type of array`);
+            }
+        }
+
+        const FilterAndMap = (array) => {
+            if(Array.isArray(array)) {
+                // 返回新数组
+                const result = new Map()
+                return arr.filter((a) => !result.has(a) && result.set(a, 1))
+            } else {
+                throw new Error(`array is not type of array`);
+            }
+        }
+    </script>
+</body>
+</html>
