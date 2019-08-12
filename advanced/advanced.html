@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>advanced</title>
+    <style>
+        *, html, body {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: content-box;
+        }
+        #dtMouseEnter {
+            width: 100%;
+            height: 20rem;
+            line-height: 20rem;
+            margin: auto;
+            text-align: center;
+            background-color: blanchedalmond;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dtMouseEnter"></div>
+    <script>
+        /**
+         * 防抖
+         * @param {fn} function
+         * @param {delay} number
+         * @return {null}
+         */
+        const debounce = (fn, delay) => {
+            let timeout = null;
+            return function () {
+                const that = this;
+                const args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    fn.apply(that, args);
+                }, delay);
+            }
+        }
+        /**
+         * 节流
+         * @param {fn} function
+         * @param {delay} number
+         * @return {null}
+         */
+        const throttle = (fn, delay) => {
+            return function () {
+                const that = this;
+                const args = arguments;
+                if(!timeout) {
+                    timeout = setTimeout(() => {
+                        timeout = null;
+                        fn.apply(that, args);
+                    }, delay);
+                }
+            }
+        }
+        let count = 0;
+        const dtContainer = document.getElementById("dtMouseEnter");
+        const dtMouseMove = () => {
+            // window
+            console.warn(this);
+            dtContainer.innerHTML = count++;
+        };
+        // function dtMouseMove () {
+            // e.target
+        //     console.warn(this);
+        //     dtContainer.innerHTML = count++;
+        // }
+        // dtContainer.onmousemove = dtMouseMove;
+        dtContainer.onmousemove = debounce(dtMouseMove, 300);
+
+    </script>
+</body>
+</html>
