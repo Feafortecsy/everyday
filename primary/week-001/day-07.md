@@ -30,12 +30,12 @@
 ## <font color=dodgerblue size=3 face="sans-serif">统计某一字符或字符串在另一个字符串中出现的次数</font>
 
 ``` JavaScript
-/**
- * @param {substring} string
- * @param {substring} string
- * @param {} number
+/** 统计某一字符或字符串在另一个字符串中出现的次数
+ * @param {String} substring
+ * @param {String} parstring
+ * @param {Number}
 */
-const tuple = (substring, parstring ) => {
+const Frequency  = (substring, parstring ) => {
     if(typeof substring !== "string" || typeof parstring !== "string") {
         throw new Error(`${substring} or ${parstring} is not a type of string`);
     } else {

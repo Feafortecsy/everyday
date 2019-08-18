@@ -45,9 +45,12 @@
 
 ## <font color=peru size=3 face="sans-serif">用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</font>
 
-```JavaScript
+``` JavaScript
 const array = [];
 let result = [];
+/** 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值
+ * @return {Array}
+*/
 const RandomNumber = () => {
     let number = (Math.floor(Math.random() * 31) + 2);
     array.push(number);
@@ -62,6 +65,12 @@ const RandomNumber = () => {
 RandomNumber();
 
 // 闭包形式
+/** 用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值
+ * @param {Number} minimum
+ * @param {Number} maximum
+ * @param {Number} count
+ * @return {Array}
+*/
 const RandomNumber = (minimum, maximum, count) => {
     let result = [];
     const array = [];

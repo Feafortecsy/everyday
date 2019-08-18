@@ -30,9 +30,9 @@
 ## <font color=dodgerblue size=3 face="sans-serif">字符串大小写转换的方法</font>
 
 ``` JavaScript
-/**
- * @param {string} string
- * @return {string}
+/** 字符串大小写转换
+ * @param {String} string
+ * @return {String}
 */
 const CaseConversion = (string) => {
     if(typeof string !== "string") {
