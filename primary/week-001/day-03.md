@@ -46,13 +46,14 @@ font-size: 0;
 ```JavaScript
 /**
  * 去除字符串中最后一个指定的字符
- * @param {string} string
- * @param {string} character 
+ * @param {String} string
+ * @param {String} character
+ * @return {String}
  */
 const RemoveCharacter = (string, character) => {
     if(typeof string === "string") {
         const position = string.indexOf(character);
-        return string.substring(0, index) + string.substring(index + 1,string.length);
+        return string.substring(0, index) + string.substring(index + 1, string.length);
     } else {
         throw new Error(`${string} is not a string type`);
     }

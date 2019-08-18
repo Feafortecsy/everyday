@@ -20,7 +20,7 @@
 </label>
 ```
 
-## <font color=dodgerblue size=3 face="sans-serif">用css创建一个三角形，并简述原理</font>
+## <font color=dodgerblue size=3 face="sans-serif">用CSS创建一个三角形，并简述原理</font>
 
 ``` CSS
 /* 创建一个无宽高的div，使用border属性将div扩展为可见 */
@@ -39,6 +39,10 @@
 ## <font color=dodgerblue size=3 face="sans-serif">设计一个去除制表符和换行符的方法</font>
 
 ``` JavaScript
+/** 去除制表符和换行符
+ * @param {String} string
+ * @return {String}
+*/
 const RemoveTabBreak = (string) => {
     return string.replace(/|\r|\t/g,"");  
 }

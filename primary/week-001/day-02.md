@@ -37,6 +37,11 @@
 ## <font color=dodgerblue size=3 face="sans-serif">去掉字符串空格</font>
 
 ```JavaScript
+/** 去掉字符串空格
+ * @param {String} string
+ * @param {String} TYPE
+ * @return {String}
+*/
 const NewTrim = (string, TYPE) => {
     if(typeof string === "string") {
         const result = {

@@ -8,6 +8,10 @@
 </head>
 <body>
     <script>
+        /** 数组去重-双循环
+         * @param {Array} array
+         * @return {Array}
+        */
         const Bicirculating = (array) => {
             const result = [];
             if(Array.isArray(array)) {
@@ -30,6 +34,10 @@
             }
         }
 
+        /** 数组去重-展开语法与Set结构
+         * @param {Array} array
+         * @return {Array}
+        */
         const Deconstruction = (array) => {
             if(Array.isArray(array)) {
                 // 返回新数组
@@ -39,6 +47,10 @@
             }
         }
 
+        /** 数组去重-Array.prototype.from()与Set结构
+         * @param {Array} array
+         * @return {Array}
+        */
         const FromAndSet = (array) => {
             if(Array.isArray(array)) {
                 // 返回新数组
@@ -48,6 +60,10 @@
             }
         }
 
+        /** 数组去重-Array.prototype.filter()与Array.prototype.indexOf()
+         * @param {Array} array
+         * @return {Array}
+        */
         const FilterAndIndexOf = (array) => {
             if(Array.isArray(array)) {
                 // 返回新数组
@@ -59,6 +75,10 @@
             }
         }
 
+        /** 数组去重-Array.prototype.filter()与Map结构
+         * @param {Array} array
+         * @return {Array}
+        */
         const FilterAndMap = (array) => {
             if(Array.isArray(array)) {
                 // 返回新数组

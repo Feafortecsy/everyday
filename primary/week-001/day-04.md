@@ -159,9 +159,9 @@ list-style-image
 ## <font color=dodgerblue size=3 face="sans-serif">写一个方法把下划线命名转成大驼峰命名</font>
 
 ``` JavaScript
-/**
- * @param {string} string
- * @return {string} result
+/** 写一个方法把下划线命名转成大驼峰命名
+ * @param {String} string
+ * @return {String} result
 */
 const UnderlineTurnsToHump = (string) => {
     const stringArray = string.split("_");
