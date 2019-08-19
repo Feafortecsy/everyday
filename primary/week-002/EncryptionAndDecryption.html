@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  window.btoa()与String.prototype.charCOdeAt()
+        /** 字符串加密
+        * @param {String} message
+        * @param {Number} length
+        * @return {String} key
+        */
+        const Encryption = (message, length = 5) => {
+            const key = message.split("").map((char) => {
+                    return String.fromCharCode(char.charCodeAt() + length);
+                }).join("");
+            return window.btoa(key);
+        }
+        /** 字符串解密
+        * @param {String} message
+        * @param {Number} length
+        * @return {String} text
+        */
+        const Decryption = (key, length = 5) => {
+            const encoded = window.atob(key); 
+            const text = encoded.split("").map((char) => {
+                return String.fromCharCode(char.charCodeAt() - length);
+            }).join("");
+            return text;
+        }
+        // XOR加密
+        const EncryptionXor = (message, key) => {
+            // let result = '';
+            // for (let i = 0; i < message.length; i++) {
+            //     result += String.fromCharCode(message.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+            // }
+            // return result;
+            return Array.from(message, (c, i) => String.fromCharCode(c.charCodeAt() ^ key.charCodeAt(i % key.length))).join('');
+        }
+        // XOR解密
+        const DecryptionXor = (text, key) => {
+            return Array.from(text, (t, i) => String.fromCharCode(t.charCodeAt() ^ key.charCodeAt(i % key.length))).join('');
+        }
+    </script>
+</body>
+</html>
